@@ -41,7 +41,8 @@
 
   <?= $this->include('templates/header'); ?>
   
-  <?= $this->include('templates/sidebar'); ?>
+  
+  <?= view_cell('App\Controllers\Sidebar::Index'); ?>
 
   <?= $this->renderSection('konten'); ?>
   

@@ -13,7 +13,7 @@
       <li class="nav-item">
         <?php foreach ($navmenu as $key => $value) : ?>
         <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-menu-button-wide"></i><span><?= $value->menu_nama; ?></span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="bi bi-menu-button-wide"></i><span><?= $value['menu_nama']; ?></span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
@@ -22,8 +22,8 @@
             </a>
           </li>
         </ul>
-        <?php endforeach ?>
       </li><!-- End Components Nav -->
+      <?php endforeach ?>
 
       <li class="nav-heading">Pages</li>
 

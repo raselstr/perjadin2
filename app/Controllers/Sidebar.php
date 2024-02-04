@@ -15,8 +15,8 @@ class Sidebar extends BaseController
             'navmenu' => $model->navmenu($role),
             // 'subnavmenu' =>$model->navsubmenu($role, )
         ];
-        dd($data);
-        return view('templates/sidebar');
+        // dd($data);
+        return view('templates/sidebar', $data);
     }
 
 }
