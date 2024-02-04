@@ -2,10 +2,12 @@
 
 namespace Config;
 
-use CodeIgniter\Config\BaseConfig;
+use App\Filters\AuthFilter;
+use App\Filters\RoleFilter;
 use CodeIgniter\Filters\CSRF;
-use CodeIgniter\Filters\DebugToolbar;
 use CodeIgniter\Filters\Honeypot;
+use CodeIgniter\Config\BaseConfig;
+use CodeIgniter\Filters\DebugToolbar;
 use CodeIgniter\Filters\InvalidChars;
 use CodeIgniter\Filters\SecureHeaders;
 
@@ -24,6 +26,8 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
+        'authfilter'    => AuthFilter::class,
+        'rolefilter'    => RoleFilter::class,
     ];
 
     /**
@@ -35,6 +39,8 @@ class Filters extends BaseConfig
      */
     public array $globals = [
         'before' => [
+            'authfilter' => ['except' => ['login', 'loginProses', 'logout','/']],
+            'rolefilter'=> ['except' => ['login','loginProses','error','logout','/']],
             // 'honeypot',
             // 'csrf',
             // 'invalidchars',

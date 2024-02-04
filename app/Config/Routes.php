@@ -9,7 +9,7 @@ $routes->get('/', 'Home::index');
 $routes->get('error', 'Kesalahan::index');
 
 $routes->get('login', 'Auth::index');
-$routes->post('loginProses', 'Auth::loginproses');
+$routes->post('loginproses', 'Auth::loginproses');
 $routes->get('logout', 'Auth::logout');
 
 $routes->presenter('register');

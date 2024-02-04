@@ -12,7 +12,7 @@ class Auth extends BaseController
         if(session('role')){
             return redirect()->to(site_url('/'));
         }
-        return view('layout/login');
+        return view('templates/login');
     }
 
     // public function loginProses()
