@@ -42,7 +42,7 @@
   <?= $this->include('templates/header'); ?>
   
   
-  <?= view_cell('App\Controllers\Sidebar::Index'); ?>
+  <?= $this->include('templates/sidebar') ?>
 
   <?= $this->renderSection('konten'); ?>
   

@@ -10,10 +10,12 @@ class Sidebar extends BaseController
     {
         $model = new AuthModel();
         $role = session('role_id');
+        $menu = $model->navmenu($role);
+        // $submenu = $model->navsubmenu($role, $menu['menu_id']);
 
         $data = [
-            'navmenu' => $model->navmenu($role),
-            // 'subnavmenu' =>$model->navsubmenu($role, )
+            'menu' => $menu,
+            'submenu' => $model->navsubmenu($role, $menu['menu_id']),
         ];
         // dd($data);
         return view('templates/sidebar', $data);
