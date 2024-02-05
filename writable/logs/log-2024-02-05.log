@@ -1,0 +1,679 @@
+INFO - 2024-02-05 02:16:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-02-05 02:16:04 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp2\htdocs\perjadin2\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp2\htdocs\perjadin2\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'rasel', Object(SensitiveParameterValue), 'perjadin2', 3306, '', 0)
+#1 C:\xampp2\htdocs\perjadin2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp2\htdocs\perjadin2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp2\htdocs\perjadin2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `b`.`rol...', Array, false)
+#4 C:\xampp2\htdocs\perjadin2\app\Models\AuthModel.php(58): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp2\htdocs\perjadin2\app\Controllers\Sidebar.php(15): App\Models\AuthModel->navmenu(NULL)
+#6 C:\xampp2\htdocs\perjadin2\system\View\Cell.php(279): App\Controllers\Sidebar->index()
+#7 C:\xampp2\htdocs\perjadin2\system\View\Cell.php(103): CodeIgniter\View\Cell->renderSimpleClass(Object(App\Controllers\Sidebar), 'Index', Array, 'App\\Controllers...')
+#8 C:\xampp2\htdocs\perjadin2\system\Common.php(1204): CodeIgniter\View\Cell->render('App\\Controllers...', Array, 0, 'AppControllersS...')
+#9 C:\xampp2\htdocs\perjadin2\app\Views\templates\default.php(45): view_cell('App\\Controllers...')
+#10 C:\xampp2\htdocs\perjadin2\system\View\View.php(226): include('C:\\xampp2\\htdoc...')
+#11 C:\xampp2\htdocs\perjadin2\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#12 C:\xampp2\htdocs\perjadin2\system\View\View.php(242): CodeIgniter\View\View->render('templates/defau...', Array, true)
+#13 C:\xampp2\htdocs\perjadin2\system\Common.php(1188): CodeIgniter\View\View->render('templates/Dashb...', Array, true)
+#14 C:\xampp2\htdocs\perjadin2\app\Controllers\Home.php(9): view('templates/Dashb...')
+#15 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(919): App\Controllers\Home->index()
+#16 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#17 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#18 C:\xampp2\htdocs\perjadin2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#19 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp2\htdocs\perjadin2\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp2\htdocs\perjadin2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp2\htdocs\perjadin2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp2\htdocs\perjadin2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `b`.`rol...', Array, false)
+#3 C:\xampp2\htdocs\perjadin2\app\Models\AuthModel.php(58): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp2\htdocs\perjadin2\app\Controllers\Sidebar.php(15): App\Models\AuthModel->navmenu(NULL)
+#5 C:\xampp2\htdocs\perjadin2\system\View\Cell.php(279): App\Controllers\Sidebar->index()
+#6 C:\xampp2\htdocs\perjadin2\system\View\Cell.php(103): CodeIgniter\View\Cell->renderSimpleClass(Object(App\Controllers\Sidebar), 'Index', Array, 'App\\Controllers...')
+#7 C:\xampp2\htdocs\perjadin2\system\Common.php(1204): CodeIgniter\View\Cell->render('App\\Controllers...', Array, 0, 'AppControllersS...')
+#8 C:\xampp2\htdocs\perjadin2\app\Views\templates\default.php(45): view_cell('App\\Controllers...')
+#9 C:\xampp2\htdocs\perjadin2\system\View\View.php(226): include('C:\\xampp2\\htdoc...')
+#10 C:\xampp2\htdocs\perjadin2\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#11 C:\xampp2\htdocs\perjadin2\system\View\View.php(242): CodeIgniter\View\View->render('templates/defau...', Array, true)
+#12 C:\xampp2\htdocs\perjadin2\system\Common.php(1188): CodeIgniter\View\View->render('templates/Dashb...', Array, true)
+#13 C:\xampp2\htdocs\perjadin2\app\Controllers\Home.php(9): view('templates/Dashb...')
+#14 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(919): App\Controllers\Home->index()
+#15 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#16 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#17 C:\xampp2\htdocs\perjadin2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#18 {main}
+CRITICAL - 2024-02-05 02:16:04 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `b`.`role_id`, `b`.`role_nama`, `d`.`menu_id`, `d`.`menu_nama`, `d`.`menu_icon`, `d`.`menu_link`
+FROM `rolemenus` as `a`
+JOIN `roles` as `b` ON `b`.`role_id` = `a`.`role_id`
+JOIN `submenus` as `c` ON `c`.`submenu_id` = `a`.`submenu_id`
+JOIN `menus` as `d` ON `d`.`menu_id` = `c`.`menu_id`
+WHERE `c`.`submenu_active` = :c.submenu_active:
+AND `d`.`menu_active` = :d.menu_active:
+GROUP BY `d`.`menu_id`
+ORDER BY `d`.`menu_id` ASC', [...], false)
+ 3 APPPATH\Models\AuthModel.php(58): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Sidebar.php(15): App\Models\AuthModel->navmenu(null)
+ 5 SYSTEMPATH\View\Cell.php(279): App\Controllers\Sidebar->index()
+ 6 SYSTEMPATH\View\Cell.php(103): CodeIgniter\View\Cell->renderSimpleClass(Object(App\Controllers\Sidebar), 'Index', [], 'App\\Controllers\\Sidebar')
+ 7 SYSTEMPATH\Common.php(1204): CodeIgniter\View\Cell->render('App\\Controllers\\Sidebar::Index', [], 0, 'AppControllersSidebarIndex40cd750bba9870f18aada2478b24840a')
+ 8 APPPATH\Views\templates\default.php(45): view_cell('App\\Controllers\\Sidebar::Index')
+ 9 SYSTEMPATH\View\View.php(226): include('C:\\xampp2\\htdocs\\perjadin2\\app\\Views\\templates\\default.php')
+10 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('templates/default', [], true)
+12 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('templates/Dashboard', [], true)
+13 APPPATH\Controllers\Home.php(9): view('templates/Dashboard')
+14 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->index()
+15 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-02-05 02:16:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-02-05 02:16:17 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp2\htdocs\perjadin2\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp2\htdocs\perjadin2\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'rasel', Object(SensitiveParameterValue), 'perjadin2', 3306, '', 0)
+#1 C:\xampp2\htdocs\perjadin2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp2\htdocs\perjadin2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp2\htdocs\perjadin2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `b`.`rol...', Array, false)
+#4 C:\xampp2\htdocs\perjadin2\app\Models\AuthModel.php(58): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp2\htdocs\perjadin2\app\Controllers\Sidebar.php(15): App\Models\AuthModel->navmenu(NULL)
+#6 C:\xampp2\htdocs\perjadin2\system\View\Cell.php(279): App\Controllers\Sidebar->index()
+#7 C:\xampp2\htdocs\perjadin2\system\View\Cell.php(103): CodeIgniter\View\Cell->renderSimpleClass(Object(App\Controllers\Sidebar), 'Index', Array, 'App\\Controllers...')
+#8 C:\xampp2\htdocs\perjadin2\system\Common.php(1204): CodeIgniter\View\Cell->render('App\\Controllers...', Array, 0, 'AppControllersS...')
+#9 C:\xampp2\htdocs\perjadin2\app\Views\templates\default.php(45): view_cell('App\\Controllers...')
+#10 C:\xampp2\htdocs\perjadin2\system\View\View.php(226): include('C:\\xampp2\\htdoc...')
+#11 C:\xampp2\htdocs\perjadin2\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#12 C:\xampp2\htdocs\perjadin2\system\View\View.php(242): CodeIgniter\View\View->render('templates/defau...', Array, true)
+#13 C:\xampp2\htdocs\perjadin2\system\Common.php(1188): CodeIgniter\View\View->render('templates/Dashb...', Array, true)
+#14 C:\xampp2\htdocs\perjadin2\app\Controllers\Home.php(9): view('templates/Dashb...')
+#15 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(919): App\Controllers\Home->index()
+#16 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#17 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#18 C:\xampp2\htdocs\perjadin2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#19 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp2\htdocs\perjadin2\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp2\htdocs\perjadin2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp2\htdocs\perjadin2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp2\htdocs\perjadin2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `b`.`rol...', Array, false)
+#3 C:\xampp2\htdocs\perjadin2\app\Models\AuthModel.php(58): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp2\htdocs\perjadin2\app\Controllers\Sidebar.php(15): App\Models\AuthModel->navmenu(NULL)
+#5 C:\xampp2\htdocs\perjadin2\system\View\Cell.php(279): App\Controllers\Sidebar->index()
+#6 C:\xampp2\htdocs\perjadin2\system\View\Cell.php(103): CodeIgniter\View\Cell->renderSimpleClass(Object(App\Controllers\Sidebar), 'Index', Array, 'App\\Controllers...')
+#7 C:\xampp2\htdocs\perjadin2\system\Common.php(1204): CodeIgniter\View\Cell->render('App\\Controllers...', Array, 0, 'AppControllersS...')
+#8 C:\xampp2\htdocs\perjadin2\app\Views\templates\default.php(45): view_cell('App\\Controllers...')
+#9 C:\xampp2\htdocs\perjadin2\system\View\View.php(226): include('C:\\xampp2\\htdoc...')
+#10 C:\xampp2\htdocs\perjadin2\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#11 C:\xampp2\htdocs\perjadin2\system\View\View.php(242): CodeIgniter\View\View->render('templates/defau...', Array, true)
+#12 C:\xampp2\htdocs\perjadin2\system\Common.php(1188): CodeIgniter\View\View->render('templates/Dashb...', Array, true)
+#13 C:\xampp2\htdocs\perjadin2\app\Controllers\Home.php(9): view('templates/Dashb...')
+#14 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(919): App\Controllers\Home->index()
+#15 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#16 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#17 C:\xampp2\htdocs\perjadin2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#18 {main}
+CRITICAL - 2024-02-05 02:16:17 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `b`.`role_id`, `b`.`role_nama`, `d`.`menu_id`, `d`.`menu_nama`, `d`.`menu_icon`, `d`.`menu_link`
+FROM `rolemenus` as `a`
+JOIN `roles` as `b` ON `b`.`role_id` = `a`.`role_id`
+JOIN `submenus` as `c` ON `c`.`submenu_id` = `a`.`submenu_id`
+JOIN `menus` as `d` ON `d`.`menu_id` = `c`.`menu_id`
+WHERE `c`.`submenu_active` = :c.submenu_active:
+AND `d`.`menu_active` = :d.menu_active:
+GROUP BY `d`.`menu_id`
+ORDER BY `d`.`menu_id` ASC', [...], false)
+ 3 APPPATH\Models\AuthModel.php(58): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Sidebar.php(15): App\Models\AuthModel->navmenu(null)
+ 5 SYSTEMPATH\View\Cell.php(279): App\Controllers\Sidebar->index()
+ 6 SYSTEMPATH\View\Cell.php(103): CodeIgniter\View\Cell->renderSimpleClass(Object(App\Controllers\Sidebar), 'Index', [], 'App\\Controllers\\Sidebar')
+ 7 SYSTEMPATH\Common.php(1204): CodeIgniter\View\Cell->render('App\\Controllers\\Sidebar::Index', [], 0, 'AppControllersSidebarIndex40cd750bba9870f18aada2478b24840a')
+ 8 APPPATH\Views\templates\default.php(45): view_cell('App\\Controllers\\Sidebar::Index')
+ 9 SYSTEMPATH\View\View.php(226): include('C:\\xampp2\\htdocs\\perjadin2\\app\\Views\\templates\\default.php')
+10 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('templates/default', [], true)
+12 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('templates/Dashboard', [], true)
+13 APPPATH\Controllers\Home.php(9): view('templates/Dashboard')
+14 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->index()
+15 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-02-05 02:16:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-02-05 02:16:52 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp2\htdocs\perjadin2\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp2\htdocs\perjadin2\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'rasel', Object(SensitiveParameterValue), 'perjadin1', 3306, '', 0)
+#1 C:\xampp2\htdocs\perjadin2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp2\htdocs\perjadin2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp2\htdocs\perjadin2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `b`.`rol...', Array, false)
+#4 C:\xampp2\htdocs\perjadin2\app\Models\AuthModel.php(58): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp2\htdocs\perjadin2\app\Controllers\Sidebar.php(15): App\Models\AuthModel->navmenu(NULL)
+#6 C:\xampp2\htdocs\perjadin2\system\View\Cell.php(279): App\Controllers\Sidebar->index()
+#7 C:\xampp2\htdocs\perjadin2\system\View\Cell.php(103): CodeIgniter\View\Cell->renderSimpleClass(Object(App\Controllers\Sidebar), 'Index', Array, 'App\\Controllers...')
+#8 C:\xampp2\htdocs\perjadin2\system\Common.php(1204): CodeIgniter\View\Cell->render('App\\Controllers...', Array, 0, 'AppControllersS...')
+#9 C:\xampp2\htdocs\perjadin2\app\Views\templates\default.php(45): view_cell('App\\Controllers...')
+#10 C:\xampp2\htdocs\perjadin2\system\View\View.php(226): include('C:\\xampp2\\htdoc...')
+#11 C:\xampp2\htdocs\perjadin2\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#12 C:\xampp2\htdocs\perjadin2\system\View\View.php(242): CodeIgniter\View\View->render('templates/defau...', Array, true)
+#13 C:\xampp2\htdocs\perjadin2\system\Common.php(1188): CodeIgniter\View\View->render('templates/Dashb...', Array, true)
+#14 C:\xampp2\htdocs\perjadin2\app\Controllers\Home.php(9): view('templates/Dashb...')
+#15 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(919): App\Controllers\Home->index()
+#16 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#17 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#18 C:\xampp2\htdocs\perjadin2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#19 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp2\htdocs\perjadin2\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp2\htdocs\perjadin2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp2\htdocs\perjadin2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp2\htdocs\perjadin2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `b`.`rol...', Array, false)
+#3 C:\xampp2\htdocs\perjadin2\app\Models\AuthModel.php(58): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp2\htdocs\perjadin2\app\Controllers\Sidebar.php(15): App\Models\AuthModel->navmenu(NULL)
+#5 C:\xampp2\htdocs\perjadin2\system\View\Cell.php(279): App\Controllers\Sidebar->index()
+#6 C:\xampp2\htdocs\perjadin2\system\View\Cell.php(103): CodeIgniter\View\Cell->renderSimpleClass(Object(App\Controllers\Sidebar), 'Index', Array, 'App\\Controllers...')
+#7 C:\xampp2\htdocs\perjadin2\system\Common.php(1204): CodeIgniter\View\Cell->render('App\\Controllers...', Array, 0, 'AppControllersS...')
+#8 C:\xampp2\htdocs\perjadin2\app\Views\templates\default.php(45): view_cell('App\\Controllers...')
+#9 C:\xampp2\htdocs\perjadin2\system\View\View.php(226): include('C:\\xampp2\\htdoc...')
+#10 C:\xampp2\htdocs\perjadin2\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#11 C:\xampp2\htdocs\perjadin2\system\View\View.php(242): CodeIgniter\View\View->render('templates/defau...', Array, true)
+#12 C:\xampp2\htdocs\perjadin2\system\Common.php(1188): CodeIgniter\View\View->render('templates/Dashb...', Array, true)
+#13 C:\xampp2\htdocs\perjadin2\app\Controllers\Home.php(9): view('templates/Dashb...')
+#14 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(919): App\Controllers\Home->index()
+#15 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#16 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#17 C:\xampp2\htdocs\perjadin2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#18 {main}
+CRITICAL - 2024-02-05 02:16:52 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `b`.`role_id`, `b`.`role_nama`, `d`.`menu_id`, `d`.`menu_nama`, `d`.`menu_icon`, `d`.`menu_link`
+FROM `rolemenus` as `a`
+JOIN `roles` as `b` ON `b`.`role_id` = `a`.`role_id`
+JOIN `submenus` as `c` ON `c`.`submenu_id` = `a`.`submenu_id`
+JOIN `menus` as `d` ON `d`.`menu_id` = `c`.`menu_id`
+WHERE `c`.`submenu_active` = :c.submenu_active:
+AND `d`.`menu_active` = :d.menu_active:
+GROUP BY `d`.`menu_id`
+ORDER BY `d`.`menu_id` ASC', [...], false)
+ 3 APPPATH\Models\AuthModel.php(58): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Sidebar.php(15): App\Models\AuthModel->navmenu(null)
+ 5 SYSTEMPATH\View\Cell.php(279): App\Controllers\Sidebar->index()
+ 6 SYSTEMPATH\View\Cell.php(103): CodeIgniter\View\Cell->renderSimpleClass(Object(App\Controllers\Sidebar), 'Index', [], 'App\\Controllers\\Sidebar')
+ 7 SYSTEMPATH\Common.php(1204): CodeIgniter\View\Cell->render('App\\Controllers\\Sidebar::Index', [], 0, 'AppControllersSidebarIndex40cd750bba9870f18aada2478b24840a')
+ 8 APPPATH\Views\templates\default.php(45): view_cell('App\\Controllers\\Sidebar::Index')
+ 9 SYSTEMPATH\View\View.php(226): include('C:\\xampp2\\htdocs\\perjadin2\\app\\Views\\templates\\default.php')
+10 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('templates/default', [], true)
+12 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('templates/Dashboard', [], true)
+13 APPPATH\Controllers\Home.php(9): view('templates/Dashboard')
+14 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->index()
+15 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-02-05 02:17:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-02-05 02:17:04 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp2\htdocs\perjadin2\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp2\htdocs\perjadin2\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'rasel', Object(SensitiveParameterValue), 'perjadin1', 3306, '', 0)
+#1 C:\xampp2\htdocs\perjadin2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp2\htdocs\perjadin2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp2\htdocs\perjadin2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `b`.`rol...', Array, false)
+#4 C:\xampp2\htdocs\perjadin2\app\Models\AuthModel.php(58): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp2\htdocs\perjadin2\app\Controllers\Sidebar.php(15): App\Models\AuthModel->navmenu(NULL)
+#6 C:\xampp2\htdocs\perjadin2\system\View\Cell.php(279): App\Controllers\Sidebar->index()
+#7 C:\xampp2\htdocs\perjadin2\system\View\Cell.php(103): CodeIgniter\View\Cell->renderSimpleClass(Object(App\Controllers\Sidebar), 'Index', Array, 'App\\Controllers...')
+#8 C:\xampp2\htdocs\perjadin2\system\Common.php(1204): CodeIgniter\View\Cell->render('App\\Controllers...', Array, 0, 'AppControllersS...')
+#9 C:\xampp2\htdocs\perjadin2\app\Views\templates\default.php(45): view_cell('App\\Controllers...')
+#10 C:\xampp2\htdocs\perjadin2\system\View\View.php(226): include('C:\\xampp2\\htdoc...')
+#11 C:\xampp2\htdocs\perjadin2\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#12 C:\xampp2\htdocs\perjadin2\system\View\View.php(242): CodeIgniter\View\View->render('templates/defau...', Array, true)
+#13 C:\xampp2\htdocs\perjadin2\system\Common.php(1188): CodeIgniter\View\View->render('templates/Dashb...', Array, true)
+#14 C:\xampp2\htdocs\perjadin2\app\Controllers\Home.php(9): view('templates/Dashb...')
+#15 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(919): App\Controllers\Home->index()
+#16 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#17 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#18 C:\xampp2\htdocs\perjadin2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#19 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp2\htdocs\perjadin2\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp2\htdocs\perjadin2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp2\htdocs\perjadin2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp2\htdocs\perjadin2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `b`.`rol...', Array, false)
+#3 C:\xampp2\htdocs\perjadin2\app\Models\AuthModel.php(58): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp2\htdocs\perjadin2\app\Controllers\Sidebar.php(15): App\Models\AuthModel->navmenu(NULL)
+#5 C:\xampp2\htdocs\perjadin2\system\View\Cell.php(279): App\Controllers\Sidebar->index()
+#6 C:\xampp2\htdocs\perjadin2\system\View\Cell.php(103): CodeIgniter\View\Cell->renderSimpleClass(Object(App\Controllers\Sidebar), 'Index', Array, 'App\\Controllers...')
+#7 C:\xampp2\htdocs\perjadin2\system\Common.php(1204): CodeIgniter\View\Cell->render('App\\Controllers...', Array, 0, 'AppControllersS...')
+#8 C:\xampp2\htdocs\perjadin2\app\Views\templates\default.php(45): view_cell('App\\Controllers...')
+#9 C:\xampp2\htdocs\perjadin2\system\View\View.php(226): include('C:\\xampp2\\htdoc...')
+#10 C:\xampp2\htdocs\perjadin2\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#11 C:\xampp2\htdocs\perjadin2\system\View\View.php(242): CodeIgniter\View\View->render('templates/defau...', Array, true)
+#12 C:\xampp2\htdocs\perjadin2\system\Common.php(1188): CodeIgniter\View\View->render('templates/Dashb...', Array, true)
+#13 C:\xampp2\htdocs\perjadin2\app\Controllers\Home.php(9): view('templates/Dashb...')
+#14 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(919): App\Controllers\Home->index()
+#15 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#16 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#17 C:\xampp2\htdocs\perjadin2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#18 {main}
+CRITICAL - 2024-02-05 02:17:04 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `b`.`role_id`, `b`.`role_nama`, `d`.`menu_id`, `d`.`menu_nama`, `d`.`menu_icon`, `d`.`menu_link`
+FROM `rolemenus` as `a`
+JOIN `roles` as `b` ON `b`.`role_id` = `a`.`role_id`
+JOIN `submenus` as `c` ON `c`.`submenu_id` = `a`.`submenu_id`
+JOIN `menus` as `d` ON `d`.`menu_id` = `c`.`menu_id`
+WHERE `c`.`submenu_active` = :c.submenu_active:
+AND `d`.`menu_active` = :d.menu_active:
+GROUP BY `d`.`menu_id`
+ORDER BY `d`.`menu_id` ASC', [...], false)
+ 3 APPPATH\Models\AuthModel.php(58): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Sidebar.php(15): App\Models\AuthModel->navmenu(null)
+ 5 SYSTEMPATH\View\Cell.php(279): App\Controllers\Sidebar->index()
+ 6 SYSTEMPATH\View\Cell.php(103): CodeIgniter\View\Cell->renderSimpleClass(Object(App\Controllers\Sidebar), 'Index', [], 'App\\Controllers\\Sidebar')
+ 7 SYSTEMPATH\Common.php(1204): CodeIgniter\View\Cell->render('App\\Controllers\\Sidebar::Index', [], 0, 'AppControllersSidebarIndex40cd750bba9870f18aada2478b24840a')
+ 8 APPPATH\Views\templates\default.php(45): view_cell('App\\Controllers\\Sidebar::Index')
+ 9 SYSTEMPATH\View\View.php(226): include('C:\\xampp2\\htdocs\\perjadin2\\app\\Views\\templates\\default.php')
+10 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('templates/default', [], true)
+12 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('templates/Dashboard', [], true)
+13 APPPATH\Controllers\Home.php(9): view('templates/Dashboard')
+14 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->index()
+15 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-02-05 02:17:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 02:17:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 02:17:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 02:17:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 02:17:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 02:19:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 02:19:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 02:19:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 02:20:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 02:27:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 02:27:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 02:27:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 02:29:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 02:29:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 02:29:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 02:29:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 02:30:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 02:30:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 02:30:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 02:32:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 02:32:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 02:37:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 02:39:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 02:41:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 02:44:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 03:03:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 03:03:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 04:28:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 04:31:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 04:43:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 04:51:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 05:05:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 05:10:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 05:12:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-05 05:14:18 --> Config\App::$baseURL is invalid.
+in SYSTEMPATH\HTTP\SiteURI.php on line 197.
+ 1 SYSTEMPATH\HTTP\SiteURI.php(143): CodeIgniter\HTTP\SiteURI->normalizeBaseURL(Object(Config\App))
+ 2 SYSTEMPATH\HTTP\SiteURI.php(98): CodeIgniter\HTTP\SiteURI->determineBaseURL(Object(Config\App), null, null)
+ 3 SYSTEMPATH\HTTP\SiteURIFactory.php(222): CodeIgniter\HTTP\SiteURI->__construct(Object(Config\App), 'login', null)
+ 4 SYSTEMPATH\HTTP\SiteURIFactory.php(43): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath('login')
+ 5 SYSTEMPATH\Config\Services.php(798): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+ 6 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::uri(null, false)
+ 7 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('uri', [...])
+ 8 SYSTEMPATH\Config\Services.php(791): CodeIgniter\Config\BaseService::getSharedInstance('uri', null)
+ 9 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::uri()
+10 SYSTEMPATH\Config\Services.php(565): CodeIgniter\Config\BaseService::__callStatic('uri', [])
+11 SYSTEMPATH\Config\Services.php(523): CodeIgniter\Config\Services::incomingrequest(Object(Config\App), false)
+12 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::request(Object(Config\App), false)
+13 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('request', [...])
+14 SYSTEMPATH\Config\Services.php(558): CodeIgniter\Config\BaseService::getSharedInstance('request', Object(Config\App))
+15 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::incomingrequest(Object(Config\App))
+16 SYSTEMPATH\Config\Services.php(538): CodeIgniter\Config\BaseService::__callStatic('incomingrequest', [...])
+17 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::createRequest(Object(Config\App))
+18 SYSTEMPATH\CodeIgniter.php(639): CodeIgniter\Config\BaseService::__callStatic('createRequest', [...])
+19 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->getRequestObject()
+20 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-05 05:14:18 --> Uncaught CodeIgniter\Exceptions\ConfigException: Config\App::$baseURL is invalid. in C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURI.php:197
+Stack trace:
+#0 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURI.php(143): CodeIgniter\HTTP\SiteURI->normalizeBaseURL(Object(Config\App))
+#1 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURI.php(98): CodeIgniter\HTTP\SiteURI->determineBaseURL(Object(Config\App), NULL, NULL)
+#2 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURIFactory.php(222): CodeIgniter\HTTP\SiteURI->__construct(Object(Config\App), 'login', NULL)
+#3 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURIFactory.php(43): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath('login')
+#4 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(798): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+#5 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri(NULL, false)
+#6 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#7 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(791): CodeIgniter\Config\BaseService::getSharedInstance('uri', NULL)
+#8 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri()
+#9 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(565): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#10 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(523): CodeIgniter\Config\Services::incomingrequest(Object(Config\App), false)
+#11 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request(NULL, false)
+#12 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#13 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(519): CodeIgniter\Config\BaseService::getSharedInstance('request', NULL)
+#14 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request()
+#15 C:\xampp2\htdocs\perjadin2\system\Debug\Exceptions.php(135): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#16 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\ConfigException))
+#17 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\ConfigException
+Config\App::$baseURL is invalid.
+#0 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURI.php(143): CodeIgniter\HTTP\SiteURI->normalizeBaseURL(Object(Config\App))
+#1 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURI.php(98): CodeIgniter\HTTP\SiteURI->determineBaseURL(Object(Config\App), NULL, NULL)
+#2 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURIFactory.php(222): CodeIgniter\HTTP\SiteURI->__construct(Object(Config\App), 'login', NULL)
+#3 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURIFactory.php(43): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath('login')
+#4 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(798): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+#5 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri(NULL, false)
+#6 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#7 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(791): CodeIgniter\Config\BaseService::getSharedInstance('uri', NULL)
+#8 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri()
+#9 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(565): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#10 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(523): CodeIgniter\Config\Services::incomingrequest(Object(Config\App), false)
+#11 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request(Object(Config\App), false)
+#12 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#13 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(558): CodeIgniter\Config\BaseService::getSharedInstance('request', Object(Config\App))
+#14 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::incomingrequest(Object(Config\App))
+#15 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(538): CodeIgniter\Config\BaseService::__callStatic('incomingrequest', Array)
+#16 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::createRequest(Object(Config\App))
+#17 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(639): CodeIgniter\Config\BaseService::__callStatic('createRequest', Array)
+#18 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(347): CodeIgniter\CodeIgniter->getRequestObject()
+#19 C:\xampp2\htdocs\perjadin2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#20 {main}
+in SYSTEMPATH\HTTP\SiteURI.php on line 197.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-02-05 05:14:23 --> Config\App::$baseURL is invalid.
+in SYSTEMPATH\HTTP\SiteURI.php on line 197.
+ 1 SYSTEMPATH\HTTP\SiteURI.php(143): CodeIgniter\HTTP\SiteURI->normalizeBaseURL(Object(Config\App))
+ 2 SYSTEMPATH\HTTP\SiteURI.php(98): CodeIgniter\HTTP\SiteURI->determineBaseURL(Object(Config\App), null, null)
+ 3 SYSTEMPATH\HTTP\SiteURIFactory.php(222): CodeIgniter\HTTP\SiteURI->__construct(Object(Config\App), 'login', null)
+ 4 SYSTEMPATH\HTTP\SiteURIFactory.php(43): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath('login')
+ 5 SYSTEMPATH\Config\Services.php(798): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+ 6 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::uri(null, false)
+ 7 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('uri', [...])
+ 8 SYSTEMPATH\Config\Services.php(791): CodeIgniter\Config\BaseService::getSharedInstance('uri', null)
+ 9 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::uri()
+10 SYSTEMPATH\Config\Services.php(565): CodeIgniter\Config\BaseService::__callStatic('uri', [])
+11 SYSTEMPATH\Config\Services.php(523): CodeIgniter\Config\Services::incomingrequest(Object(Config\App), false)
+12 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::request(Object(Config\App), false)
+13 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('request', [...])
+14 SYSTEMPATH\Config\Services.php(558): CodeIgniter\Config\BaseService::getSharedInstance('request', Object(Config\App))
+15 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::incomingrequest(Object(Config\App))
+16 SYSTEMPATH\Config\Services.php(538): CodeIgniter\Config\BaseService::__callStatic('incomingrequest', [...])
+17 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::createRequest(Object(Config\App))
+18 SYSTEMPATH\CodeIgniter.php(639): CodeIgniter\Config\BaseService::__callStatic('createRequest', [...])
+19 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->getRequestObject()
+20 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-05 05:14:23 --> Uncaught CodeIgniter\Exceptions\ConfigException: Config\App::$baseURL is invalid. in C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURI.php:197
+Stack trace:
+#0 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURI.php(143): CodeIgniter\HTTP\SiteURI->normalizeBaseURL(Object(Config\App))
+#1 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURI.php(98): CodeIgniter\HTTP\SiteURI->determineBaseURL(Object(Config\App), NULL, NULL)
+#2 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURIFactory.php(222): CodeIgniter\HTTP\SiteURI->__construct(Object(Config\App), 'login', NULL)
+#3 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURIFactory.php(43): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath('login')
+#4 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(798): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+#5 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri(NULL, false)
+#6 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#7 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(791): CodeIgniter\Config\BaseService::getSharedInstance('uri', NULL)
+#8 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri()
+#9 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(565): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#10 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(523): CodeIgniter\Config\Services::incomingrequest(Object(Config\App), false)
+#11 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request(NULL, false)
+#12 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#13 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(519): CodeIgniter\Config\BaseService::getSharedInstance('request', NULL)
+#14 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request()
+#15 C:\xampp2\htdocs\perjadin2\system\Debug\Exceptions.php(135): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#16 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\ConfigException))
+#17 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\ConfigException
+Config\App::$baseURL is invalid.
+#0 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURI.php(143): CodeIgniter\HTTP\SiteURI->normalizeBaseURL(Object(Config\App))
+#1 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURI.php(98): CodeIgniter\HTTP\SiteURI->determineBaseURL(Object(Config\App), NULL, NULL)
+#2 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURIFactory.php(222): CodeIgniter\HTTP\SiteURI->__construct(Object(Config\App), 'login', NULL)
+#3 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURIFactory.php(43): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath('login')
+#4 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(798): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+#5 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri(NULL, false)
+#6 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#7 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(791): CodeIgniter\Config\BaseService::getSharedInstance('uri', NULL)
+#8 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri()
+#9 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(565): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#10 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(523): CodeIgniter\Config\Services::incomingrequest(Object(Config\App), false)
+#11 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request(Object(Config\App), false)
+#12 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#13 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(558): CodeIgniter\Config\BaseService::getSharedInstance('request', Object(Config\App))
+#14 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::incomingrequest(Object(Config\App))
+#15 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(538): CodeIgniter\Config\BaseService::__callStatic('incomingrequest', Array)
+#16 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::createRequest(Object(Config\App))
+#17 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(639): CodeIgniter\Config\BaseService::__callStatic('createRequest', Array)
+#18 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(347): CodeIgniter\CodeIgniter->getRequestObject()
+#19 C:\xampp2\htdocs\perjadin2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#20 {main}
+in SYSTEMPATH\HTTP\SiteURI.php on line 197.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-02-05 05:14:25 --> Config\App::$baseURL is invalid.
+in SYSTEMPATH\HTTP\SiteURI.php on line 197.
+ 1 SYSTEMPATH\HTTP\SiteURI.php(143): CodeIgniter\HTTP\SiteURI->normalizeBaseURL(Object(Config\App))
+ 2 SYSTEMPATH\HTTP\SiteURI.php(98): CodeIgniter\HTTP\SiteURI->determineBaseURL(Object(Config\App), null, null)
+ 3 SYSTEMPATH\HTTP\SiteURIFactory.php(222): CodeIgniter\HTTP\SiteURI->__construct(Object(Config\App), 'login', null)
+ 4 SYSTEMPATH\HTTP\SiteURIFactory.php(43): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath('login')
+ 5 SYSTEMPATH\Config\Services.php(798): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+ 6 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::uri(null, false)
+ 7 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('uri', [...])
+ 8 SYSTEMPATH\Config\Services.php(791): CodeIgniter\Config\BaseService::getSharedInstance('uri', null)
+ 9 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::uri()
+10 SYSTEMPATH\Config\Services.php(565): CodeIgniter\Config\BaseService::__callStatic('uri', [])
+11 SYSTEMPATH\Config\Services.php(523): CodeIgniter\Config\Services::incomingrequest(Object(Config\App), false)
+12 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::request(Object(Config\App), false)
+13 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('request', [...])
+14 SYSTEMPATH\Config\Services.php(558): CodeIgniter\Config\BaseService::getSharedInstance('request', Object(Config\App))
+15 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::incomingrequest(Object(Config\App))
+16 SYSTEMPATH\Config\Services.php(538): CodeIgniter\Config\BaseService::__callStatic('incomingrequest', [...])
+17 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::createRequest(Object(Config\App))
+18 SYSTEMPATH\CodeIgniter.php(639): CodeIgniter\Config\BaseService::__callStatic('createRequest', [...])
+19 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->getRequestObject()
+20 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-05 05:14:25 --> Uncaught CodeIgniter\Exceptions\ConfigException: Config\App::$baseURL is invalid. in C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURI.php:197
+Stack trace:
+#0 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURI.php(143): CodeIgniter\HTTP\SiteURI->normalizeBaseURL(Object(Config\App))
+#1 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURI.php(98): CodeIgniter\HTTP\SiteURI->determineBaseURL(Object(Config\App), NULL, NULL)
+#2 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURIFactory.php(222): CodeIgniter\HTTP\SiteURI->__construct(Object(Config\App), 'login', NULL)
+#3 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURIFactory.php(43): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath('login')
+#4 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(798): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+#5 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri(NULL, false)
+#6 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#7 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(791): CodeIgniter\Config\BaseService::getSharedInstance('uri', NULL)
+#8 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri()
+#9 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(565): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#10 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(523): CodeIgniter\Config\Services::incomingrequest(Object(Config\App), false)
+#11 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request(NULL, false)
+#12 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#13 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(519): CodeIgniter\Config\BaseService::getSharedInstance('request', NULL)
+#14 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request()
+#15 C:\xampp2\htdocs\perjadin2\system\Debug\Exceptions.php(135): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#16 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\ConfigException))
+#17 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\ConfigException
+Config\App::$baseURL is invalid.
+#0 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURI.php(143): CodeIgniter\HTTP\SiteURI->normalizeBaseURL(Object(Config\App))
+#1 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURI.php(98): CodeIgniter\HTTP\SiteURI->determineBaseURL(Object(Config\App), NULL, NULL)
+#2 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURIFactory.php(222): CodeIgniter\HTTP\SiteURI->__construct(Object(Config\App), 'login', NULL)
+#3 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURIFactory.php(43): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath('login')
+#4 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(798): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+#5 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri(NULL, false)
+#6 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#7 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(791): CodeIgniter\Config\BaseService::getSharedInstance('uri', NULL)
+#8 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri()
+#9 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(565): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#10 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(523): CodeIgniter\Config\Services::incomingrequest(Object(Config\App), false)
+#11 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request(Object(Config\App), false)
+#12 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#13 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(558): CodeIgniter\Config\BaseService::getSharedInstance('request', Object(Config\App))
+#14 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::incomingrequest(Object(Config\App))
+#15 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(538): CodeIgniter\Config\BaseService::__callStatic('incomingrequest', Array)
+#16 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::createRequest(Object(Config\App))
+#17 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(639): CodeIgniter\Config\BaseService::__callStatic('createRequest', Array)
+#18 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(347): CodeIgniter\CodeIgniter->getRequestObject()
+#19 C:\xampp2\htdocs\perjadin2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#20 {main}
+in SYSTEMPATH\HTTP\SiteURI.php on line 197.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-02-05 05:14:26 --> Config\App::$baseURL is invalid.
+in SYSTEMPATH\HTTP\SiteURI.php on line 197.
+ 1 SYSTEMPATH\HTTP\SiteURI.php(143): CodeIgniter\HTTP\SiteURI->normalizeBaseURL(Object(Config\App))
+ 2 SYSTEMPATH\HTTP\SiteURI.php(98): CodeIgniter\HTTP\SiteURI->determineBaseURL(Object(Config\App), null, null)
+ 3 SYSTEMPATH\HTTP\SiteURIFactory.php(222): CodeIgniter\HTTP\SiteURI->__construct(Object(Config\App), 'login', null)
+ 4 SYSTEMPATH\HTTP\SiteURIFactory.php(43): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath('login')
+ 5 SYSTEMPATH\Config\Services.php(798): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+ 6 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::uri(null, false)
+ 7 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('uri', [...])
+ 8 SYSTEMPATH\Config\Services.php(791): CodeIgniter\Config\BaseService::getSharedInstance('uri', null)
+ 9 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::uri()
+10 SYSTEMPATH\Config\Services.php(565): CodeIgniter\Config\BaseService::__callStatic('uri', [])
+11 SYSTEMPATH\Config\Services.php(523): CodeIgniter\Config\Services::incomingrequest(Object(Config\App), false)
+12 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::request(Object(Config\App), false)
+13 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('request', [...])
+14 SYSTEMPATH\Config\Services.php(558): CodeIgniter\Config\BaseService::getSharedInstance('request', Object(Config\App))
+15 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::incomingrequest(Object(Config\App))
+16 SYSTEMPATH\Config\Services.php(538): CodeIgniter\Config\BaseService::__callStatic('incomingrequest', [...])
+17 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::createRequest(Object(Config\App))
+18 SYSTEMPATH\CodeIgniter.php(639): CodeIgniter\Config\BaseService::__callStatic('createRequest', [...])
+19 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->getRequestObject()
+20 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-05 05:14:26 --> Uncaught CodeIgniter\Exceptions\ConfigException: Config\App::$baseURL is invalid. in C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURI.php:197
+Stack trace:
+#0 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURI.php(143): CodeIgniter\HTTP\SiteURI->normalizeBaseURL(Object(Config\App))
+#1 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURI.php(98): CodeIgniter\HTTP\SiteURI->determineBaseURL(Object(Config\App), NULL, NULL)
+#2 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURIFactory.php(222): CodeIgniter\HTTP\SiteURI->__construct(Object(Config\App), 'login', NULL)
+#3 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURIFactory.php(43): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath('login')
+#4 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(798): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+#5 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri(NULL, false)
+#6 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#7 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(791): CodeIgniter\Config\BaseService::getSharedInstance('uri', NULL)
+#8 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri()
+#9 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(565): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#10 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(523): CodeIgniter\Config\Services::incomingrequest(Object(Config\App), false)
+#11 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request(NULL, false)
+#12 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#13 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(519): CodeIgniter\Config\BaseService::getSharedInstance('request', NULL)
+#14 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request()
+#15 C:\xampp2\htdocs\perjadin2\system\Debug\Exceptions.php(135): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#16 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\ConfigException))
+#17 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\ConfigException
+Config\App::$baseURL is invalid.
+#0 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURI.php(143): CodeIgniter\HTTP\SiteURI->normalizeBaseURL(Object(Config\App))
+#1 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURI.php(98): CodeIgniter\HTTP\SiteURI->determineBaseURL(Object(Config\App), NULL, NULL)
+#2 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURIFactory.php(222): CodeIgniter\HTTP\SiteURI->__construct(Object(Config\App), 'login', NULL)
+#3 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURIFactory.php(43): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath('login')
+#4 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(798): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+#5 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri(NULL, false)
+#6 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#7 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(791): CodeIgniter\Config\BaseService::getSharedInstance('uri', NULL)
+#8 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri()
+#9 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(565): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#10 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(523): CodeIgniter\Config\Services::incomingrequest(Object(Config\App), false)
+#11 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request(Object(Config\App), false)
+#12 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#13 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(558): CodeIgniter\Config\BaseService::getSharedInstance('request', Object(Config\App))
+#14 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::incomingrequest(Object(Config\App))
+#15 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(538): CodeIgniter\Config\BaseService::__callStatic('incomingrequest', Array)
+#16 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::createRequest(Object(Config\App))
+#17 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(639): CodeIgniter\Config\BaseService::__callStatic('createRequest', Array)
+#18 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(347): CodeIgniter\CodeIgniter->getRequestObject()
+#19 C:\xampp2\htdocs\perjadin2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#20 {main}
+in SYSTEMPATH\HTTP\SiteURI.php on line 197.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-02-05 05:15:00 --> Config\App::$baseURL is invalid.
+in SYSTEMPATH\HTTP\SiteURI.php on line 197.
+ 1 SYSTEMPATH\HTTP\SiteURI.php(143): CodeIgniter\HTTP\SiteURI->normalizeBaseURL(Object(Config\App))
+ 2 SYSTEMPATH\HTTP\SiteURI.php(98): CodeIgniter\HTTP\SiteURI->determineBaseURL(Object(Config\App), null, null)
+ 3 SYSTEMPATH\HTTP\SiteURIFactory.php(222): CodeIgniter\HTTP\SiteURI->__construct(Object(Config\App), 'login', null)
+ 4 SYSTEMPATH\HTTP\SiteURIFactory.php(43): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath('login')
+ 5 SYSTEMPATH\Config\Services.php(798): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+ 6 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::uri(null, false)
+ 7 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('uri', [...])
+ 8 SYSTEMPATH\Config\Services.php(791): CodeIgniter\Config\BaseService::getSharedInstance('uri', null)
+ 9 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::uri()
+10 SYSTEMPATH\Config\Services.php(565): CodeIgniter\Config\BaseService::__callStatic('uri', [])
+11 SYSTEMPATH\Config\Services.php(523): CodeIgniter\Config\Services::incomingrequest(Object(Config\App), false)
+12 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::request(Object(Config\App), false)
+13 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('request', [...])
+14 SYSTEMPATH\Config\Services.php(558): CodeIgniter\Config\BaseService::getSharedInstance('request', Object(Config\App))
+15 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::incomingrequest(Object(Config\App))
+16 SYSTEMPATH\Config\Services.php(538): CodeIgniter\Config\BaseService::__callStatic('incomingrequest', [...])
+17 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::createRequest(Object(Config\App))
+18 SYSTEMPATH\CodeIgniter.php(639): CodeIgniter\Config\BaseService::__callStatic('createRequest', [...])
+19 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->getRequestObject()
+20 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-05 05:15:00 --> Uncaught CodeIgniter\Exceptions\ConfigException: Config\App::$baseURL is invalid. in C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURI.php:197
+Stack trace:
+#0 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURI.php(143): CodeIgniter\HTTP\SiteURI->normalizeBaseURL(Object(Config\App))
+#1 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURI.php(98): CodeIgniter\HTTP\SiteURI->determineBaseURL(Object(Config\App), NULL, NULL)
+#2 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURIFactory.php(222): CodeIgniter\HTTP\SiteURI->__construct(Object(Config\App), 'login', NULL)
+#3 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURIFactory.php(43): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath('login')
+#4 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(798): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+#5 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri(NULL, false)
+#6 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#7 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(791): CodeIgniter\Config\BaseService::getSharedInstance('uri', NULL)
+#8 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri()
+#9 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(565): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#10 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(523): CodeIgniter\Config\Services::incomingrequest(Object(Config\App), false)
+#11 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request(NULL, false)
+#12 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#13 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(519): CodeIgniter\Config\BaseService::getSharedInstance('request', NULL)
+#14 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request()
+#15 C:\xampp2\htdocs\perjadin2\system\Debug\Exceptions.php(135): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#16 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\ConfigException))
+#17 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\ConfigException
+Config\App::$baseURL is invalid.
+#0 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURI.php(143): CodeIgniter\HTTP\SiteURI->normalizeBaseURL(Object(Config\App))
+#1 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURI.php(98): CodeIgniter\HTTP\SiteURI->determineBaseURL(Object(Config\App), NULL, NULL)
+#2 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURIFactory.php(222): CodeIgniter\HTTP\SiteURI->__construct(Object(Config\App), 'login', NULL)
+#3 C:\xampp2\htdocs\perjadin2\system\HTTP\SiteURIFactory.php(43): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath('login')
+#4 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(798): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+#5 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri(NULL, false)
+#6 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#7 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(791): CodeIgniter\Config\BaseService::getSharedInstance('uri', NULL)
+#8 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri()
+#9 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(565): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#10 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(523): CodeIgniter\Config\Services::incomingrequest(Object(Config\App), false)
+#11 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request(Object(Config\App), false)
+#12 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#13 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(558): CodeIgniter\Config\BaseService::getSharedInstance('request', Object(Config\App))
+#14 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::incomingrequest(Object(Config\App))
+#15 C:\xampp2\htdocs\perjadin2\system\Config\Services.php(538): CodeIgniter\Config\BaseService::__callStatic('incomingrequest', Array)
+#16 C:\xampp2\htdocs\perjadin2\system\Config\BaseService.php(258): CodeIgniter\Config\Services::createRequest(Object(Config\App))
+#17 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(639): CodeIgniter\Config\BaseService::__callStatic('createRequest', Array)
+#18 C:\xampp2\htdocs\perjadin2\system\CodeIgniter.php(347): CodeIgniter\CodeIgniter->getRequestObject()
+#19 C:\xampp2\htdocs\perjadin2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#20 {main}
+in SYSTEMPATH\HTTP\SiteURI.php on line 197.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-02-05 05:15:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 05:15:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 05:15:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 05:18:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 05:18:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 05:18:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 05:18:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-05 05:18:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

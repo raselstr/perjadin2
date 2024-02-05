@@ -1,4 +1,4 @@
-<?php
+<?phpignore_user
 
 namespace Config;
 

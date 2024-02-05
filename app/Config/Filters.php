@@ -39,8 +39,8 @@ class Filters extends BaseConfig
      */
     public array $globals = [
         'before' => [
-            'authfilter' => ['except' => ['login', 'loginProses', 'logout','/']],
-            'rolefilter'=> ['except' => ['login','loginProses','error','logout','/']],
+            'authfilter' => ['except' => ['login', 'loginProses', 'logout']],
+            'rolefilter'=> ['except' => ['login','loginProses','error','logout']],
             // 'honeypot',
             // 'csrf',
             // 'invalidchars',
